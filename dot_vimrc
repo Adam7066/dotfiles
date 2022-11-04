@@ -1,0 +1,58 @@
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Raimondi/delimitMate'
+call vundle#end()
+filetype plugin indent on
+
+set termguicolors
+set t_Co=256
+set background=dark
+set laststatus=2
+set ruler
+set number
+set cursorline
+hi LineNr gui=bold guifg=DarkGrey guibg=NONE
+hi Cursorline cterm=none gui=none guibg=darkblue
+set hlsearch
+" map Ctrl-L to be nohl, clear search highlight
+nnoremap <c-l> :nohl<cr>
+set nowrap
+set mouse=a
+set backspace=2
+syntax enable
+syntax on
+
+filetype indent on
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set foldmethod=syntax
+set nofoldenable
+
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+" 快捷键 i 開/關 縮進可視化
+let mapleader = "\<Space>"
+:nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+
+noremap <F1> :NERDTreeToggle<CR>
+let NERDTreeWinSize=25
+let NERDTreeWinPos="left"
+let NERDTreeShowHidden=0
+let NERDTreeMinimalUI=1
+let NERDTreeAutoDeleteBuffer=1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore=['\.pyc$', '\~$', 'node_modules'] "ignore files in NERDTree
+let NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
