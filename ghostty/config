@@ -1,0 +1,20 @@
+# https://ghostty.org/docs/config
+#
+# Reload:
+#   macOS: Command + Shift + comma
+
+config-file=?macos.config
+
+font-family = "Hack Nerd Font Mono"
+font-size = 16
+font-thicken = true
+
+window-width="100"
+window-height="30"
+
+cursor-style = "bar"
+cursor-style-blink = true
+
+background-opacity = 0.85
+
+working-directory = home
