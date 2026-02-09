@@ -49,5 +49,8 @@ if [[ $run_symlink == true ]]; then
 
         # git
         ln -sf "$(pwd)/git/.gitconfig" "$HOME/.gitconfig"
+
+        # vscode
+        ln -sf "$(pwd)/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
     fi
 fi
