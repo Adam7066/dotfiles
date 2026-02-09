@@ -1,0 +1,13 @@
+[user]
+    name = Smallten
+    email = smallten@smallten.me
+    signingKey = 5FEC67797E2A4E4F16CB6DC002FBD8B86C3C6948
+[core]
+    editor = vim
+[commit]
+    gpgSign = true
+[tag]
+    forceSignAnnotated = true
+[gpg]
+    format = openpgp
+    program = gpg
