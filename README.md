@@ -10,5 +10,5 @@ chmod +x install.sh
 
 ### 進階用法
 可選擇只執行部分功能：
-- 只安裝 Homebrew 套件：`./install.sh --package`
+- 只安裝 套件：`./install.sh --package`
 - 只建立 symlink：`./install.sh --symlink`
