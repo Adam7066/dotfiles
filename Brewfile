@@ -8,6 +8,7 @@ brew "imagemagick"
 brew "smartmontools"
 brew "telegram-downloader"
 brew "yt-dlp"
+brew "zimfw"
 # 程式開發
 brew "cmake"
 brew "go"
