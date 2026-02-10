@@ -81,15 +81,28 @@ fi
 
 # symlink
 if [[ $run_symlink == true ]]; then
+    echo "Symlinking dotfiles..."
     if [[ $(uname) == "Darwin" ]]; then
+        # 不顯示 last login
+        touch "$HOME/.hushlogin"
+
         # ghostty
-        ln -sf "$(pwd)/ghostty/config" "~/Library/Application Support/com.mitchellh.ghostty/config"
-        ln -sf "$(pwd)/ghostty/macos.config" "~/Library/Application Support/com.mitchellh.ghostty/macos.config"
+        echo "ghostty..."
+        ln -sf "$(pwd)/ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+        ln -sf "$(pwd)/ghostty/macos.config" "$HOME/Library/Application Support/com.mitchellh.ghostty/macos.config"
 
         # git
-        ln -sf "$(pwd)/git/.gitconfig" "~/.gitconfig"
+        echo "git..."
+        ln -sf "$(pwd)/git/.gitconfig" "$HOME/.gitconfig"
+
+        # zsh
+        echo "zsh..."
+        ln -sf "$(pwd)/zsh/.zshrc" "$HOME/.zshrc"
+        ln -sf "$(pwd)/zsh/.zimrc" "$HOME/.zimrc"
+        ln -sf "$(pwd)/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 
         # vscode
-        ln -sf "$(pwd)/vscode/settings.json" "~/Library/Application Support/Code/User/settings.json"
+        echo "vscode..."
+        ln -sf "$(pwd)/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
     fi
 fi
