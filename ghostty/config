@@ -18,3 +18,4 @@ cursor-style-blink = true
 background-opacity = 0.85
 
 working-directory = home
+window-inherit-working-directory = false
