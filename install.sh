@@ -54,11 +54,11 @@ if [[ $run_package == true ]]; then
         brew bundle install --file="$(pwd)/Brewfile"
 
         # feishin
-        if [[ ! -d "~/Applications/Feishin.app" ]]; then
+        if [[ ! -d "/Applications/Feishin.app" ]]; then
             curl -LO https://github.com/jeffvli/feishin/releases/download/v1.4.2/Feishin-1.4.2-mac-arm64.dmg
             verify_checksum "89a1384c572ed7dc4064c80cefcf9bb0a6c6f56e86f53f706e488b535dbb68af" "Feishin-1.4.2-mac-arm64.dmg"
             hdiutil attach Feishin-1.4.2-mac-arm64.dmg
-            cp -R "/Volumes/Feishin 1.4.2-arm64/Feishin.app" ~/Applications/
+            sudo cp -R "/Volumes/Feishin 1.4.2-arm64/Feishin.app" /Applications/
             hdiutil detach "/Volumes/Feishin 1.4.2-arm64"
         else
             echo "Feishin is already installed."
