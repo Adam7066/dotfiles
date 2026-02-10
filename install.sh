@@ -40,12 +40,17 @@ if [[ $run_package == true ]]; then
         if ! command -v brew &> /dev/null; then
             echo "Homebrew not found. Installing Homebrew..."
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	    echo >> /Users/smallten/.zprofile
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/smallten/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv zsh)"
             if ! command -v brew &> /dev/null; then
                 echo "Failed to install Homebrew. Please check the installation script and try again."
                 exit 1
             fi
         fi
-        brew bundle cleanup --file="$(pwd)/Brewfile"
+        echo "Homebrew cleanup..."
+        brew bundle cleanup --force --file="$(pwd)/Brewfile"
+        echo "Homebrew install..."
         brew bundle install --file="$(pwd)/Brewfile"
 
         # feishin
