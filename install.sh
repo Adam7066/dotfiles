@@ -53,6 +53,19 @@ if [[ $run_package == true ]]; then
         echo "Homebrew install..."
         brew bundle install --file="$(pwd)/Brewfile"
 
+        # corepack for pnpm, yarn
+        if ! command -v corepack &> /dev/null; then
+            echo "Corepack not found. Installing Corepack..."
+            if ! command -v npm &> /dev/null; then
+                echo "npm not found. Please install Node.js and npm first."
+                exit 1
+            else
+                npm install --global corepack@latest
+                corepack enable pnpm
+                corepack enable yarn
+            fi
+        fi
+
         # feishin
         if [[ ! -d "/Applications/Feishin.app" ]]; then
             curl -LO https://github.com/jeffvli/feishin/releases/download/v1.4.2/Feishin-1.4.2-mac-arm64.dmg
