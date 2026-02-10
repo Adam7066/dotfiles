@@ -16,6 +16,8 @@ brew "gf" # GoFrame
 tap "filosottile/musl-cross"
 brew "filosottile/musl-cross/musl-cross"
 brew "node"
+# https://github.com/antfu-collective/ni
+brew "ni"
 brew "python@3.14"
 brew "uv"
 
