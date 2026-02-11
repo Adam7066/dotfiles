@@ -104,5 +104,10 @@ if [[ $run_symlink == true ]]; then
         # vscode
         echo "vscode..."
         ln -sf "$(pwd)/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    elif [[ -f /etc/os-release && "$(grep -i '^ID=cachyos' /etc/os-release)" ]]; then
+        # hypr
+        echo "hypr..."
+        ln -sfn "$(pwd)/hypr" "$HOME/.config"
+        hyprctl reload
     fi
 fi
