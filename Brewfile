@@ -20,6 +20,9 @@ brew "node"
 brew "ni"
 brew "python@3.14"
 brew "uv"
+# swift
+brew "carthage"
+brew "swiftlint"
 
 # Cask (GUI apps)
 cask "altserver"
