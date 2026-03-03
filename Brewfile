@@ -3,6 +3,7 @@ brew "bat"
 brew "btop"
 brew "colordiff"
 brew "ffmpeg"
+brew "gpac" # MP4Box
 brew "hugo"
 brew "imagemagick"
 brew "smartmontools"
