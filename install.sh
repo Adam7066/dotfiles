@@ -88,8 +88,7 @@ if [[ $run_symlink == true ]]; then
 
         # ghostty
         echo "ghostty..."
-        ln -sf "$(pwd)/ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
-        ln -sf "$(pwd)/ghostty/macos.config" "$HOME/Library/Application Support/com.mitchellh.ghostty/macos.config"
+        ln -sfn "$(pwd)/ghostty" "$HOME/.config/ghostty"
 
         # git
         echo "git..."
@@ -107,7 +106,7 @@ if [[ $run_symlink == true ]]; then
     elif [[ -f /etc/os-release && "$(grep -i '^ID=cachyos' /etc/os-release)" ]]; then
         # hypr
         echo "hypr..."
-        ln -sfn "$(pwd)/hypr" "$HOME/.config"
+        ln -sfn "$(pwd)/hypr" "$HOME/.config/hypr"
         hyprctl reload
     fi
 fi
