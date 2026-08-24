@@ -1,0 +1,25 @@
+[user]
+    name = Smallten
+    email = smallten@smallten.me
+{{ if eq .chezmoi.os "darwin" -}}
+    signingKey = "5FEC67797E2A4E4F16CB6DC002FBD8B86C3C6948"
+{{ else if eq .chezmoi.os "linux" -}}
+    signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILAXCpk743cbLNMF6a6UN+qgRXAtgq24Nm1PGjUfq8wf"
+{{ end }}
+
+[core]
+    editor = nvim
+
+[commit]
+    gpgSign = true
+
+[tag]
+    forceSignAnnotated = true
+
+[gpg]
+{{ if eq .chezmoi.os "darwin" -}}
+    format = openpgp
+    program = gpg
+{{ else if eq .chezmoi.os "linux" -}}
+    format = ssh
+{{ end }}
