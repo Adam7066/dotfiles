@@ -1,0 +1,83 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --file=/dev/stdin <<EOF
+brew "bash"
+brew "bat"
+brew "btop"
+brew "carthage"
+brew "chezmoi"
+brew "cmake"
+brew "colordiff"
+brew "fcrackzip"
+brew "ffmpeg"
+tap "filosottile/musl-cross", trusted: true
+brew "filosottile/musl-cross/musl-cross"
+brew "gf" # GoFrame
+brew "go"
+brew "golangci-lint"
+brew "gpac" # MP4Box
+brew "hugo"
+brew "imagemagick"
+brew "john-jumbo"
+brew "neovim"
+brew "ni" # https://github.com/antfu-collective/ni
+brew "node"
+brew "pdfcpu"
+brew "python@3.14"
+brew "smartmontools"
+brew "swiftlint"
+brew "telegram-downloader"
+brew "uv"
+brew "webp"
+brew "yt-dlp"
+brew "zimfw"
+
+cask "altserver"
+cask "appcleaner"
+cask "balenaetcher"
+cask "betterdisplay"
+cask "bitwarden"
+cask "discord"
+cask "elasticvue"
+cask "font-hack-nerd-font"
+cask "ghostty"
+cask "goland"
+cask "google-chrome"
+cask "gpg-suite"
+cask "iina"
+cask "inkscape"
+cask "jordanbaird-ice@beta"
+cask "keka"
+cask "mongodb-compass"
+cask "motrix"
+cask "musicbrainz-picard"
+cask "openinterminal"
+cask "orbstack"
+cask "phpstorm"
+cask "pikpak"
+cask "protonvpn"
+cask "pycharm"
+cask "rapidapi"
+cask "raycast"
+cask "redis-insight"
+cask "scroll-reverser"
+cask "slack"
+cask "stats"
+cask "telegram"
+cask "visual-studio-code"
+cask "webstorm"
+cask "zed"
+cask "zen"
+
+# App Store
+brew "mas"
+mas "Goodnotes", id: 1444383602
+mas "Pages", id: 361309726
+mas "Numbers", id: 361304891
+mas "Keynote", id: 361285480
+mas "LINE", id: 539883307
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
+EOF
+{{ end -}}
