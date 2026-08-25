@@ -5,7 +5,7 @@
 
 config-file=?macos.config
 
-theme = dracula
+theme = dark:Ghostty Default Style Dark, light:Farmhouse Light
 
 font-family = "Hack Nerd Font Mono"
 font-size = 16
