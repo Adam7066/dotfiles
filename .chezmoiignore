@@ -1,0 +1,6 @@
+README.md
+
+# Ignore non-macOS files.
+{{ if ne .chezmoi.os "darwin" -}}
+.chezmoiscripts/darwin/
+{{- end }}
