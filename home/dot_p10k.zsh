@@ -504,14 +504,14 @@
   typeset -g POWERLEVEL9K_STATUS_OK=true
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
   typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=0
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=214
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=226
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=0
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=214
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=226
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
