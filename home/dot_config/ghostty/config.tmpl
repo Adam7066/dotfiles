@@ -1,0 +1,29 @@
+# https://ghostty.org/docs/config
+#
+# Reload:
+#   linux: Ctrl + Shift + comma
+#   macOS: Command + Shift + comma
+
+theme = dark:Ghostty Default Style Dark, light:Farmhouse Light
+font-family = "Hack Nerd Font Mono"
+font-thicken = true
+cursor-style = "bar"
+cursor-style-blink = true
+working-directory = home
+window-inherit-working-directory = false
+
+{{ if eq .chezmoi.os "darwin" -}}
+font-size = 16
+
+window-width = "100"
+window-height = "30"
+
+background-opacity = 0.85
+
+# cmd + ` 執行 quick_terminal
+keybind = global:cmd+backquote=toggle_quick_terminal
+
+{{ else if eq .chezmoi.os "linux" -}}
+font-size = 14
+
+{{ end }}
