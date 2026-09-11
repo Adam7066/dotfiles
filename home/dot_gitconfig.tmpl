@@ -23,3 +23,8 @@
 {{ else if eq .chezmoi.os "linux" -}}
     format = ssh
 {{ end }}
+
+{{ if eq .chezmoi.os "linux" -}}
+[gpg "ssh"]
+    allowedSigners = /home/smallten/.ssh/allowedSigners
+{{ end }}
