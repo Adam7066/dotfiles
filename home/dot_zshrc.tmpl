@@ -33,7 +33,13 @@ export PATH=$PATH:$HOME/go/bin
 export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 
 {{ if eq .chezmoi.os "darwin" -}}
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+{{ else if eq .chezmoi.os "linux" -}}
+# npm
+PATH="$HOME/.local/bin:$PATH"
+export npm_config_prefix="$HOME/.local"
 {{ end }}
