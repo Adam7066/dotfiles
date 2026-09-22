@@ -1,0 +1,50 @@
+[bar.default]
+background_opacity = 0.25
+capsule = true
+capsule_padding = 10.0
+capsule_thickness = 0.75
+font_family = "Noto Sans CJK TC"
+margin_edge = 0
+margin_ends = 0
+padding = 10
+radius = 0
+thickness = 40
+widget_spacing = 5
+center = ["workspaces"]
+end = ["tray", "group:g1", "clock"]
+
+[bar.default.monitor.dp1]
+match = "DP-1"
+enabled = true
+start = ["control-center", "cpu", "ram", "media"]
+
+[bar.default.monitor.hdmi_a_1]
+match = "HDMI-A-1"
+enabled = true
+start = ["control-center", "media"]
+
+[[bar.default.capsule_group]]
+enabled = true
+fill = "surface_variant"
+id = "g1"
+members = ["clipboard", "notifications"]
+opacity = 1.0
+padding = 15.0
+widget_spacing = 10
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+visualization = "none"
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_used"
+visualization = "none"
+
+[widget.workspaces]
+hide_when_empty = true
+scale = 1.2
+
+[widget.clock]
+format = "%b%e日%A  %p %I : %M"
