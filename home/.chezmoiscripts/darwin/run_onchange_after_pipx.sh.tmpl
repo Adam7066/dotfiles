@@ -1,0 +1,12 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# pipx 由 homebrew script 安裝，此 script 為 after_ 階段，會在其後執行
+if ! command -v pipx >/dev/null 2>&1; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+if ! pipx list --short 2>/dev/null | grep -q '^poetry '; then
+    pipx install poetry
+fi
+{{ end -}}
