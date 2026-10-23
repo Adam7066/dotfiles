@@ -11,4 +11,5 @@ interval_seconds = 900
 directory = "~/Pictures/wallpapers/horizontal"
 
 [wallpaper.monitor.HDMI-A-1]
-directory = "~/Pictures/wallpapers/vertical"
+# directory = "~/Pictures/wallpapers/vertical"
+directory = "~/Pictures/wallpapers/horizontal"
