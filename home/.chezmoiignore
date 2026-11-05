@@ -1,10 +1,8 @@
-README.md
-
-{{ if ne .chezmoi.os "darwin" -}}
+{{- if ne .chezmoi.os "darwin" }}
 .chezmoiscripts/darwin
-{{ end -}}
+{{- end }}
 
-{{ if ne .chezmoi.os "linux" -}}
+{{- if ne .chezmoi.os "linux" }}
 .config/niri
 .config/noctalia
 {{- end }}
