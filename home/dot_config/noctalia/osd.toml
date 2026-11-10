@@ -1,3 +1,6 @@
 [osd]
 monitors = ["HDMI-A-1"]
 position = "top_left"
+
+[osd.kinds]
+keyboard_layout = false
