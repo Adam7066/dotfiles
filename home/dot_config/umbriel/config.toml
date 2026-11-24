@@ -144,6 +144,11 @@ options = "altwin:swap_lalt_lwin"
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Ctrl+Q" = { action = "spawn noctalia msg session lock", repeat = false }
 
+# Screenshots via Noctalia
+"Print" = { action = "spawn noctalia msg screenshot-region", repeat = false }
+"Shift+Print" = { action = "spawn noctalia msg screenshot-fullscreen", repeat = false }
+"Ctrl+Print" = { action = "spawn noctalia msg screenshot-window", repeat = false }
+
 "Mod+Escape" = "session-quit"
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 
