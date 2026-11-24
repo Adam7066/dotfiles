@@ -44,6 +44,8 @@ export NVM_DIR="$HOME/.nvm"
 # pipx
 export PATH="$PATH:$HOME/.local/bin"
 
+# Added by Kiri: its docker and kiri commands (kiri setup --uninstall removes this)
+case ":$PATH:" in *":$HOME/.kiri/bin:"*) ;; *) export PATH="$PATH:$HOME/.kiri/bin" ;; esac
 {{ else if eq .chezmoi.os "linux" -}}
 # npm
 PATH="$HOME/.local/bin:$PATH"
