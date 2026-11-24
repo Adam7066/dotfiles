@@ -1,0 +1,15 @@
+[plugins]
+enabled = ["cleboost/zed-provider"]
+auto_update = "all"
+
+[[plugins.source]]
+name     = "official"
+kind     = "git"
+location = "https://github.com/noctalia-dev/official-plugins"
+enabled  = true
+
+[[plugins.source]]
+name     = "community"
+kind     = "git"
+location = "https://github.com/noctalia-dev/community-plugins"
+enabled  = true

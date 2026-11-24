@@ -1,0 +1,12 @@
+{{- $isOffice := eq (output "uname" "-n" | trim) "office" -}}
+[osd]
+{{- if $isOffice }}
+monitors = ["DP-1"]
+position = "top_right"
+{{- else }}
+monitors = ["HDMI-A-1"]
+position = "top_left"
+{{- end }}
+
+[osd.kinds]
+keyboard_layout = false

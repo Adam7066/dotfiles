@@ -5,7 +5,7 @@
 
 系統環境：
 - macOS
-- Arch Linux、[Niri](https://github.com/niri-wm/niri)、[Noctalia](https://github.com/noctalia-dev/noctalia)、[Noctalia Greeter](https://github.com/noctalia-dev/noctalia-greeter)
+- Arch Linux
 
 ## 📦 Installation
 
@@ -19,5 +19,5 @@
     ```
 2. 直接套用：
     ```bash
-    chezmoi init --apply https://github.com/Adam7066/dotfiles.git
+    chezmoi init --apply git@github.com:Adam7066/dotfiles.git
     ```

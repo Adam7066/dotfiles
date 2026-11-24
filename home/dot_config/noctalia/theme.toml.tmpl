@@ -1,7 +1,7 @@
 [theme]
 builtin = "Noctalia"
 community_palette = "Doomed"
-mode = "dark"
+mode = "{{ if eq (output "uname" "-n" | trim) "office" }}light{{ else }}dark{{ end }}"
 source = "builtin"
 wallpaper_scheme = "m3-tonal-spot"
 
