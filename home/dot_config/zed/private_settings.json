@@ -20,12 +20,13 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark",
+    "dark": "Catppuccin Mocha",
   },
+  "icon_theme": "Catppuccin Mocha",
   "agent_servers": {
     "claude-acp": {
       "default_config_options": {
-        "model": "opus",
+        "model": "sonnet",
       },
       "type": "registry",
     },
@@ -33,10 +34,36 @@
   "auto_install_extensions": {
     "html": true,
     "toml": true,
+    "php": true,
+    "php-snippets": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "golangci-lint": true
   },
+  "code_lens": "on",
   "languages": {
     "PHP": {
       "language_servers": ["phpactor", "!intelephense", "!phptools", "!phpantom", "..."]
+    },
+    "Go": {
+      "inlay_hints": {
+        "enabled": true
+      }
+    }
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
     }
   }
 }
