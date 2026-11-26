@@ -1,9 +1,8 @@
-{{- $isOffice := eq (output "uname" "-n" | trim) "office" -}}
 [osd]
-{{- if $isOffice }}
+{{- if eq .hostname "office" }}
 monitors = ["DP-1"]
 position = "top_right"
-{{- else }}
+{{- else if eq .hostname "ap201tg" }}
 monitors = ["HDMI-A-1"]
 position = "top_left"
 {{- end }}

@@ -1,4 +1,4 @@
-{{- $useGpg := or (eq .chezmoi.os "darwin") (eq (output "uname" "-n" | trim) "office") -}}
+{{- $useGpg := ne .hostname "ap201tg" -}}
 [user]
     name = Smallten
     email = smallten@proton.me

@@ -1,0 +1,4 @@
+{{- $hostname := output "uname" "-n" | trim -}}
+
+[data]
+    hostname = {{ $hostname | quote }}
